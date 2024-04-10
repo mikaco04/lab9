@@ -21,8 +21,11 @@ def main():
     elif selection = 3:
         break
 
-
-
+def decode(encoded_password):
+    decoded_password = ""
+    for char in encoded_password:
+        decoded_password += str((int(char) - 3) % 10)
+    return decoded_password
 
 if __name__ == '__main__':
     main()
